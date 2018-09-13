@@ -1,0 +1,239 @@
+.prices {
+	padding-top: 50px;
+	@media (min-width: 768px) {
+		padding-top: 85px;
+	}
+
+	@media (min-width: 1200px) {
+		padding-top: 130px;
+	}
+	.prices-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		span {
+			margin-right: 10px;
+		}
+		img {
+			margin-bottom: -5px;
+			height: 28px;
+			width: 123px;
+		}
+		.title-cloud (-6px, 157px, -15px, 232px);
+
+		@media (min-width: 768px) {
+			margin-bottom: 25px;
+			span {
+				margin-right: 15px;
+			}
+			img {
+				margin-bottom: -5px;
+				height: 42px;
+				width: 183px;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			margin-bottom: 60px;
+			span {
+				margin-right: 25px;
+			}
+			img {
+				margin-bottom: -10px;
+				height: 70px;
+				width: 305px;
+			}
+		}
+	}
+
+	.prices-cards {
+		.price-card {
+			font-size: 16px;
+			padding: 30px 0;
+
+			.price-card__title {
+				display: inline-block;
+				font-size: 21px;
+				margin-bottom: 25px;
+				background: @footerWhite;
+				border-radius: 10px;
+				width: 100%;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				&--name {
+					display: inline-block;
+					font-weight: 700;
+				}
+			}
+
+			.price-card__month {
+				font-weight: 700;
+				margin-bottom: 3px;
+				.discount {
+					color: @orange;
+				}
+			}
+			.price-card__cost {
+				margin-bottom: 20px;
+				.blue-text {
+					font-weight: 700;
+					color: @titleBlue;
+				}
+				.strike {
+					text-decoration: line-through;
+				}
+			}
+		}
+		// SLICK CAROUSEL ARROWS
+		.price-arrow {
+			color: @green;
+			font-family: 'fontello';
+			font-size: 30px;
+			cursor: pointer;
+			z-index: 1;
+			position: absolute;
+			top: 35px;
+			bottom: 0;
+			transition: color 0.2s ease-in;
+			&.icon-left-open-big {
+				left: 0;
+			}
+			&.icon-right-open-big {
+				right: 0;
+			}
+			&:hover, &:active, &:focus {
+				color: rgba(183, 219, 42, 0.5);
+			}
+		}
+
+
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 30px;
+			.price-card {
+				font-size: 12px;
+				height: 286px;
+				padding: 10px 5px;
+				position: relative;
+				&--blue {
+					background: @footerWhite;
+				}
+
+				.price-card__title {
+					display: block;
+					background: transparent;
+					font-size: 12px;
+					margin-bottom: 0;
+					&--name {
+						display: block;
+						font-size: 24px;
+					}
+				}
+
+				.price-card__cost {
+					margin-bottom: 10px;
+				}
+
+				.price-card__button {
+					.button {
+						position: absolute;
+						bottom: 20px;
+						left: 20%;
+					}
+				}
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.price-card {
+				font-size: 18px;
+				padding: 30px 10px;
+				height: 442px;
+				&--blue {
+					background: @bgBlueLigth;
+				}
+
+				.price-card__title {
+					font-size: 18px;
+					&--name {
+						font-size: 36px;
+					}
+				}
+				.price-card__cost {
+					margin-bottom: 20px;
+					&:nth-last-child(2) {
+						margin-bottom: 30px;
+					}
+				}
+
+				.price-card__button {
+					.button {
+						bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+	.prices-offer {
+		display: none;
+
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: "tariff cost" "button button";
+			grid-gap: 30px;
+			margin-top: 37px;
+			.price-offer {
+				font-size: 12px;
+				// margin-bottom: -10px;
+				&__item {
+					&--title-name {
+						font-size: 24px;
+						font-weight: 700;
+						margin-bottom: 15px;
+					}
+				}
+				&__tariff {
+					grid-area: tariff;
+				}
+				&__cost {
+					grid-area: cost;
+				}
+				&__button {
+					grid-area: button;
+					margin-bottom: 45px;
+					.button {
+						font-size: 14px;
+						width: 102px;
+						padding: 5px 0;
+						border: none;
+					}
+				}
+			}
+		}
+
+		@media (min-width: 1200px) {
+			margin-top: 50px;
+			.price-offer {
+				font-size: 18px;
+				margin-bottom: 3px;
+				&__item {
+					&--title-name {
+						font-size: 36px;
+						margin-bottom: 20px;
+					}
+				}
+				&__button {
+					margin-bottom: 45px;
+					.button {
+						font-size: 18px;
+						width: 162px;
+						padding: 10px 0;
+					}
+				}
+			}
+		}
+	}
+}

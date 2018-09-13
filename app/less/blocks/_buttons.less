@@ -1,0 +1,65 @@
+.button {
+	display: inline-block;
+	padding: 9px 42px;
+	background: @green;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 40px;
+	border: none;
+	text-decoration: none;
+	border: 2px solid #fff;
+	text-align: center;
+
+	transition: background 0.2s ease-in;
+
+	&:hover, &:focus, &:active {
+		background: @greenDark;
+		text-decoration: none;
+		outline: none;
+	}
+
+	&--orange {
+		background: @orange;
+
+		&:hover, &:focus, &:active {
+			background: @orangeDark;
+		}
+	}
+
+	&--transparent {
+		background: transparent;
+
+		&:hover, &:focus, &:active {
+			background: rgba(255, 255, 255, 0.3);
+		}
+	}
+
+	@media (min-width: 768px) {
+		padding: 8px 39px;
+		font-size: 16px;
+	}
+
+	@media (min-width: 1200px) {
+		padding: 13px 64px;
+		font-size: 24px;
+	}
+
+	&--small {
+		width: 162px;
+		padding: 10px 0;
+		border: none;
+		@media (min-width: 768px) {
+			font-size: 14px;
+			width: 102px;
+			padding: 5px 0;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 18px;
+			width: 162px;
+			padding: 10px 0;
+		}
+	}
+}

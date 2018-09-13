@@ -1,0 +1,80 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	min-width: 320px;
+}
+
+html {
+	font-size: 16px;
+	line-height: auto;
+}
+
+body {
+	font-family: 'Segoe UI';
+	color: @mainText;
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+	@media (min-width: 768px) {
+		max-width: 750px;
+	}
+
+	@media (min-width: 1200px) {
+		max-width: 1170px;
+	}
+}
+
+input, textarea {
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 24px;
+	line-height: 1;
+	resize: vertical;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.25em;
+	color: @mainText;
+	
+	@media (min-width: 768px) {
+		font-size: 16px;
+	}
+}
+
+.title-1, h1.title-1 {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	@media (min-width: 768px) {font-size: 36px;}
+	@media (min-width: 1200px) {font-size: 60px;}
+}
+
+.block-bg {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	&--main {
+		background: #00b9ee;
+	}
+	&--services {
+		background: #e2f8ff;
+	}
+}
+
+.block {
+	background: green;
+	padding: 30px;
+	font-weight: bold;
+	border: 1px solid #000;
+	text-align: center;
+}

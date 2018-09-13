@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Title -->
+	<title>Landing-page</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="fonts/SegoeUI/stylesheet.css">
+	<link rel="stylesheet" href="fonts/ubuntu/ubuntu.css">
+	<link rel="stylesheet" href="fonts/fontello-43e13745/css/fontello.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="libs/normalize-css/normalize.css">
+	<link rel="stylesheet" href="libs/slick/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/jquery.arcticmodal/jquery.arcticmodal-0.3.css">
+	<link rel="stylesheet" href="libs/animate.css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+<body>
+
+	<!-- HEADER -->
+	<header id="headerFixed" class="header-bg">
+		<div class="container header">
+			<a href="#" class="header__logo">
+				<img src="img/logo/twim-logo.png">
+			</a>
+			<div class="header__wrap">
+				<div class="header__title">
+					<div class="header__title-text">Внедрение</div>
+					<img src="img/logo/bitrix-small-logo-blue.png">
+				</div>
+				<div class="header__button">
+					<button class="open-modal button">заказать</button>
+				</div>
+				<div class="header__contacts">
+					<div class="header__contacts--address">Воронеж, ул. Революции 1905 года, 82н</div>
+					<div class="header__contacts--phone"><span class="blue-text">Звоните</span> +7 (473) 203-01-80</div>
+					<div class="header__contacts--email"><span class="blue-text">Пишите</span> sales@creatwim.ru</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- // HEADER -->
+
+	<!-- MODAL FORM -->
+	<div class="modal-wrap">
+		<div id="modalForm" class="box-modal feedback-form feedback-form--modal">
+			<div class="arcticmodal-close feedback-form__close"></div>
+			<div class="feedback-form__title feedback-form__title--modal title-1">
+				<span>Заказать внедрение </span>
+				<img src="img/logo/bitrix-big-logo-white.png" alt="Битрикс24">
+			</div>
+			<form id="formModal" class="feedback-form__form feedback-form__form--modal">
+				<div class="items-group">
+					<div class="form-group form-group--pr25">
+						<input class="input" type="text" name="name">
+						<label class="label">Ваше имя</label>
+					</div>
+					<div class="form-group">
+						<input class="input" type="text" name="second_name">
+						<label class="label">Ваше отчество</label>
+					</div>
+				</div>
+				<div class="items-group">
+					<div class="form-group form-group--pr25">
+						<input class="input" type="text" name="company">
+						<label class="label">Название компании</label>
+					</div>
+					<div class="form-group">
+						<input class="input" type="text" name="email">
+						<label class="label">E-mail</label>
+					</div>
+				</div>
+				<div class="items-group">
+					<div class="form-group">
+						<textarea class="input" name="comment" rows="1"></textarea>
+						<label class="label">Комментарий</label>
+					</div>
+				</div>
+				<div class="items-group files files--modal">
+					<button class="button button--transparent">скачать анкету</button>
+					<input class="inputfile" id="inputFile" type="file" name="file" value="прикрепить анкету">
+					<label for="inputFile" class="button button--transparent">прикрепить анкету</label>
+					<span>Файл не выбран</span>
+				</div>
+				<div class="items-group checkbox">
+					<label class="checkbox__label">
+						<input class="checkbox__input" type="checkbox" name="agree">
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">Я согласен на обработку <br>персональных данных</span>
+					</label>
+				</div>
+				<div class="form__error">
+					<div id="regisErr"></div>
+				</div>
+				<div class="feedback-form__button feedback-form__button--modal">
+					<input type="submit" class="button" value="отправить">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- //MODAL FORM -->
+
+	<!-- MAIN -->
+	<main class="mainpage-bg">
+		<div id="parallaxMain" class="parallax-clouds">
+			<img class="cloud" src="img/clouds-bg/cloud-r-260.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-l-240.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-l-240.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-210.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-173.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-153.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-126.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-l-118.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-l-118.png" data-offset="90">
+		</div>
+		<div class="container">
+			<div class="mainpage">
+				<div class="mainpage-benefits wow bounceInLeft">
+					<svg class="line"  viewBox="0 0 370 970" width="370" height="970">
+						<path class="curve" d="M0,0 Q330,485 0,970" />
+					</svg>
+					<div class="mainpage-benefits__items">
+						<div class="element">
+							<img src="img/icons/cloud.png">
+							<span class="element__text">соцсеть <br>компании</span>
+						</div>
+						<div class="element">
+							<img src="img/icons/task.png">
+							<span class="element__text">задачи <br>и проекты</span>
+						</div>
+						<div class="element">
+							<img src="img/icons/chat.png">
+							<span class="element__text">чат и <br>видеозвонки</span>
+						</div>
+						<div class="element">
+							<img src="img/icons/docs.png">
+							<span class="element__text">документы <br>online</span>
+						</div>
+						<div class="element">
+							<img src="img/icons/disk.png">
+							<span class="element__text">битрикс24.диск</span>
+						</div>
+						<div class="element">
+							<img src="img/icons/calendar.png">
+							<span class="element__text">календари</span>
+						</div>
+					</div>
+				</div>
+				<div class="mainpage-info wow bounceInDown">
+					<div class="mainpage-info-logo">
+						<img src="img/logo/twim-logo.png">
+					</div>
+					<div class="mainpage-info-contacts--big">
+						<div class="mainpage-info-contacts__phones">
+							<div class="mainpage-info-contacts__phones--city">
+								<div class="city">Воронеж</div>
+								<div class="phone">+7 (473) 203-01-80 <span class="city">Воронеж</span></div>
+							</div>
+							<div class="mainpage-info-contacts__phones--city">
+								<div class="city">Москва</div>
+								<div class="phone">+7 (495) 777-51-79 <span class="city">Москва</span></div>
+							</div>
+						</div>
+						<div class="mainpage-info-contacts__email">sales@creatwim.ru</div>
+					</div>
+					<div class="mainpage-info-wrap">
+						<div class="mainpage-info-screen">
+							<img class="small" src="img/screen/screen-small.png">
+							<img class="big" src="img/screen/screen-big.png">
+						</div>
+						<div class="mainpage-info-wrap--text">
+							<div class="mainpage-info-title">
+								<div class="mainpage-info-title--text">Внедрение</div>
+								<img src="img/logo/bitrix-big-logo-white.png"></img>
+							</div>
+							<div class="mainpage-info-subtitle">
+								Полный комплект инструментов <br>
+								для организации работы в компании
+							</div>
+							<div class="mainpage-info-contacts">
+								+7 (473) 203-01-80 Воронеж <br>
+								+7 (495) 777-51-79 Москва <br>
+								sales@creatwim.ru
+							</div>
+							<div class="mainpage-info-button">
+								<button class="open-modal button">заказать</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- // MAIN -->
+	
+	<!-- ORDER SERVICES -->
+	<div class="order-services-bg">
+		<div class="container order-services-grid">
+			<div class="order-services order-services__order">
+				<div class="order-services__text">
+					Заказать консультацию <br>
+					и презентацию <span class="blue-text">бесплатно</span>
+				</div>
+				<div class="order-services__button order-services__button--cloud">
+					<button class="open-modal button button--orange" >заказать</button>
+				</div>
+			</div>
+			<div class="order-services order-services__install">
+				<div class="order-services__text">
+					Установите <img class="logo" src="img/logo/bitrix-small-logo-blue.png"> <br>
+					<span class="blue-text">бесплатно</span> на месяц
+				</div>
+				<div class="order-services__button">
+					<button class="open-modal button">установить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // ORDER SERVICES -->
+
+	<!-- PRICES -->
+	<div class="container prices">
+		<div class="prices-title title-1 wow zoomIn" data-wow-delay="0.15s">
+			<span>Цены на</span>
+			<img src="img/logo/bitrix-big-logo-blue.png">
+		</div>
+		<div id="carouselPrices" class="prices-cards">
+			<div class="price-card text-center">
+				<div class="price-card__title">Тариф&nbsp;
+					<div class="price-card__title--name">CRM+</div>
+				</div>
+				<div class="price-card__month">1 месяц</div>
+				<div class="price-card__cost"><span class="blue-text">2 990</span> руб./месяц</div>
+				<div class="price-card__month">3 месяца</div>
+				<div class="price-card__cost"><span class="blue-text">2 990</span> руб./месяц</div>
+				<div class="price-card__month">6 месяцев</div>
+				<div class="price-card__cost"><span class="blue-text">2 790</span> руб./месяц</div>
+				<div class="price-card__month">12 месяцев</div>
+				<div class="price-card__cost"><span class="blue-text">2 490</span> руб./месяц</div>
+				<div class="price-card__button">
+					<button class="open-modal button button--small">заказать</button>
+				</div>
+			</div>
+			<div class="price-card price-card--blue text-center">
+				<div class="price-card__title">Тариф&nbsp;
+					<div class="price-card__title--name">Проект+</div>
+				</div>
+				<!-- <div class="price-card__month">1 месяц</div> -->
+				<div class="price-card__cost">Стоимость: <span class="blue-text">990</span> руб./месяц</div>
+				<div class="price-card__month">3 месяца (<span class="discount">-5%</span>)</div>
+				<div class="price-card__cost"><span class="strike">2 970</span> <span class="blue-text">2 821</span> руб./месяц</div>
+				<div class="price-card__month">6 месяцев (<span class="discount">-10%</span>)</div>
+				<div class="price-card__cost"><span class="strike">5 940</span> <span class="blue-text">5 346</span> руб./месяц</div>
+				<div class="price-card__month">12 месяцев (<span class="discount">-20%</span>)</div>
+				<div class="price-card__cost"><span class="strike">11 880</span> <span class="blue-text">9 504</span> руб./месяц</div>
+				<div class="price-card__button">
+					<button class="open-modal button button--small">заказать</button>
+				</div>
+			</div>
+			<div class="price-card text-center">
+				<div class="price-card__title">Тариф&nbsp;
+					<div class="price-card__title--name">Команда</div>
+				</div>
+				<div class="price-card__month">1 месяц</div>
+				<div class="price-card__cost"><span class="blue-text">15 647</span> руб./месяц</div>
+				<div class="price-card__month">3 месяца</div>
+				<div class="price-card__cost"><span class="blue-text">15 647</span> руб./месяц</div>
+				<div class="price-card__month">6 месяцев</div>
+				<div class="price-card__cost"><span class="blue-text">29 646</span> руб./месяц</div>
+				<div class="price-card__month">12 месяцев</div>
+				<div class="price-card__cost"><span class="blue-text">52 704</span> руб./месяц</div>
+				<div class="price-card__button">
+					<button class="open-modal button button--small">заказать</button>
+				</div>
+			</div>
+			<div class="price-card price-card--blue text-center">
+				<div class="price-card__title">Тариф&nbsp;
+					<div class="price-card__title--name">Компания</div>
+				</div>
+				<div class="price-card__month">1 месяц</div>
+				<div class="price-card__cost"><span class="blue-text">31 321</span> руб./месяц</div>
+				<div class="price-card__month">3 месяца</div>
+				<div class="price-card__cost"><span class="blue-text">31 321</span> руб./месяц</div>
+				<div class="price-card__month">6 месяцев</div>
+				<div class="price-card__cost"><span class="blue-text">59 346</span> руб./месяц</div>
+				<div class="price-card__month">12 месяцев</div>
+				<div class="price-card__cost"><span class="blue-text">105 504</span> руб./месяц</div>
+				<div class="price-card__button">
+					<button class="open-modal button button--small">заказать</button>
+				</div>
+			</div>
+		</div>
+		<div class="prices-offer text-center">
+			<div class="price-offer prices-offer__tariff text-right">
+				<div class="price-offer__item price-offer__item--title">Тариф</div>
+				<div class="price-offer__item price-offer__item--title-name">Проект</div>
+				<div class="price-offer__item price-offer__item--subtitle"><span class="bold">5Гб</span> дискового пространства <br> на <span class="bold">12 месяцев</span> в подарок</div>
+			</div>
+			<div class="price-offer prices-offer__cost text-left">
+				<div class="price-offer__item price-offer__item--title">Стоимость:</div>
+				<div class="price-offer__item price-offer__item--title-name"><span class="blue-text upper">Бесплатно</span></div>
+				<div class="price-offer__item price-offer__item--subtitle">или <span class="bold">12 пользователей</span> <br> на <span class="bold">1 год</span> в подарок</div>
+			</div>
+			<div class="price-offer price-offer__button">
+				<button class="button">заказать</button>
+			</div>
+		</div>
+	</div>
+	<!-- // PRICES -->
+
+	<!-- TARIFFS -->
+	<div class="container tariffs">
+		<div class="tariffs__title title-1 wow zoomIn" data-wow-delay="0.15s">Тарифы на <span class="blue-text">внедрение</span></div>
+		<div class="tariffs__tabs">
+			<dl id="tariffTabs" class="tabs">
+				<dt class="active">Пакет №1</dt>
+				<dd>
+					<section>
+						<p><span class="italic">Для небольших компаний, которые хотят вывести продажи на новый уровень, автоматизировать взаимоотношения с клиентами с помощью CRM, наладить контроль над сотрудниками.</p>
+						<h3>Краткий план работ</span></h3>
+						<ul>
+							<li> Регистрация вашего портала в сети или на вашем сервере, регистрация до 6 сотрудников.</li>
+							<li> Настройка стадий лидов и сделок (не более 10).</li>
+							<li> Оптимизация карточек лида, контакта, сделки (настройка справочников).</li>
+							<li> Подключение одного телефонного номера для совершения вызовов.</li>
+							<li> Покупка номера внутри сервиса Битрикс24 или подключение внешнего SIP-номера. Настройка телефонии и записи разговоров (стоимость номера и оплата за услуги телефонии не входят в стоимость пакета).</li>
+							<li> Подключение функции «Еmail трекер» для автоматического добавления переписки в CRM.</li>
+							<li> Интеграция CRM и личного почтового ящика (до 6 персональных почтовых адресов — по одному на каждого менеджера).</li>
+							<li> Обучение по обработке и конвертации лидов, ведению сделок, заполнению карточки контакта.</li>
+						</ul>
+						<h3>Что получится в итоге?</h3>
+						<ul>
+							<li> Автоматизацию процесса продаж.</li>
+							<li> Учет взаимоотношений с клиентами.</li>
+							<li> Возможность слушать и анализировать звонки менеджеров.</li>
+							<li> Контроль над отделом продаж и действиями каждого менеджера в отдельности.</li>
+						</ul>
+						<h3>Стоимость пакета <br> от <span class="blue-text cost">9 850</span> рублей.</h3>
+						<div class="tabs__button text-center">
+							<button class="open-modal button button--small">заказать</button>
+						</div>
+					</section>
+				</dd>
+
+				<dt>Пакет №2</dt>
+				<dd>
+					<section>
+						<h3>Пакет №2</h3>
+						<p><span class="italic">Для небольших компаний, которые хотят вывести продажи на новый уровень, автоматизировать взаимоотношения с клиентами с помощью CRM, наладить контроль над сотрудниками.</p>
+						<h3>Краткий план работ</span></h3>
+						<ul>
+							<li> Регистрация вашего портала в сети или на вашем сервере, регистрация до 6 сотрудников.</li>
+							<li> Настройка стадий лидов и сделок (не более 10).</li>
+							<li> Оптимизация карточек лида, контакта, сделки (настройка справочников).</li>
+							<li> Подключение одного телефонного номера для совершения вызовов.</li>
+							<li> Покупка номера внутри сервиса Битрикс24 или подключение внешнего SIP-номера. Настройка телефонии и записи разговоров (стоимость номера и оплата за услуги телефонии не входят в стоимость пакета).</li>
+							<li> Подключение функции «Еmail трекер» для автоматического добавления переписки в CRM.</li>
+							<li> Интеграция CRM и личного почтового ящика (до 6 персональных почтовых адресов — по одному на каждого менеджера).</li>
+							<li> Обучение по обработке и конвертации лидов, ведению сделок, заполнению карточки контакта.</li>
+						</ul>
+						<h3>Что получится в итоге?</h3>
+						<ul>
+							<li> Автоматизацию процесса продаж.</li>
+							<li> Учет взаимоотношений с клиентами.</li>
+							<li> Возможность слушать и анализировать звонки менеджеров.</li>
+							<li> Контроль над отделом продаж и действиями каждого менеджера в отдельности.</li>
+						</ul>
+						<h3>Стоимость пакета <br> от <span class="blue-text cost">9 850</span> рублей.</h3>
+						<div class="tabs__button text-center">
+							<button class="open-modal button button--small">заказать</button>
+						</div>
+					</section>
+				</dd>
+
+				<dt>Пакет №3</dt>
+				<dd>
+					<section>
+						<h3>Пакет №3</h3>
+						<p><span class="italic">Для небольших компаний, которые хотят вывести продажи на новый уровень, автоматизировать взаимоотношения с клиентами с помощью CRM, наладить контроль над сотрудниками.</p>
+						<h3>Краткий план работ</span></h3>
+						<ul>
+							<li> Регистрация вашего портала в сети или на вашем сервере, регистрация до 6 сотрудников.</li>
+							<li> Настройка стадий лидов и сделок (не более 10).</li>
+							<li> Оптимизация карточек лида, контакта, сделки (настройка справочников).</li>
+							<li> Подключение одного телефонного номера для совершения вызовов.</li>
+							<li> Покупка номера внутри сервиса Битрикс24 или подключение внешнего SIP-номера. Настройка телефонии и записи разговоров (стоимость номера и оплата за услуги телефонии не входят в стоимость пакета).</li>
+							<li> Подключение функции «Еmail трекер» для автоматического добавления переписки в CRM.</li>
+							<li> Интеграция CRM и личного почтового ящика (до 6 персональных почтовых адресов — по одному на каждого менеджера).</li>
+							<li> Обучение по обработке и конвертации лидов, ведению сделок, заполнению карточки контакта.</li>
+						</ul>
+						<h3>Что получится в итоге?</h3>
+						<ul>
+							<li> Автоматизацию процесса продаж.</li>
+							<li> Учет взаимоотношений с клиентами.</li>
+							<li> Возможность слушать и анализировать звонки менеджеров.</li>
+							<li> Контроль над отделом продаж и действиями каждого менеджера в отдельности.</li>
+						</ul>
+						<h3>Стоимость пакета <br> от <span class="blue-text cost">9 850</span> рублей.</h3>
+						<div class="tabs__button text-center">
+							<button class="open-modal button button--small">заказать</button>
+						</div>
+					</section>
+				</dd>
+
+				<dt>Пакет "Задачи и проекты"</dt>
+				<dd>
+					<section>
+						<h3>Пакет "Задачи и проекты"</h3>
+						<p><span class="italic">Для небольших компаний, которые хотят вывести продажи на новый уровень, автоматизировать взаимоотношения с клиентами с помощью CRM, наладить контроль над сотрудниками.</p>
+						<h3>Краткий план работ</span></h3>
+						<ul>
+							<li> Регистрация вашего портала в сети или на вашем сервере, регистрация до 6 сотрудников.</li>
+							<li> Настройка стадий лидов и сделок (не более 10).</li>
+							<li> Оптимизация карточек лида, контакта, сделки (настройка справочников).</li>
+							<li> Подключение одного телефонного номера для совершения вызовов.</li>
+							<li> Покупка номера внутри сервиса Битрикс24 или подключение внешнего SIP-номера. Настройка телефонии и записи разговоров (стоимость номера и оплата за услуги телефонии не входят в стоимость пакета).</li>
+							<li> Подключение функции «Еmail трекер» для автоматического добавления переписки в CRM.</li>
+							<li> Интеграция CRM и личного почтового ящика (до 6 персональных почтовых адресов — по одному на каждого менеджера).</li>
+							<li> Обучение по обработке и конвертации лидов, ведению сделок, заполнению карточки контакта.</li>
+						</ul>
+						<h3>Что получится в итоге?</h3>
+						<ul>
+							<li> Автоматизацию процесса продаж.</li>
+							<li> Учет взаимоотношений с клиентами.</li>
+							<li> Возможность слушать и анализировать звонки менеджеров.</li>
+							<li> Контроль над отделом продаж и действиями каждого менеджера в отдельности.</li>
+						</ul>
+						<h3>Стоимость пакета <br> от <span class="blue-text cost">9 850</span> рублей.</h3>
+						<div class="tabs__button text-center">
+							<button class="open-modal button button--small">заказать</button>
+						</div>
+					</section>
+				</dd>
+
+				<dt>Индивидуальный проект</dt>
+				<dd>
+					<section>
+						<h3>Индивидуальный проект</h3>
+						<p><span class="italic">Для небольших компаний, которые хотят вывести продажи на новый уровень, автоматизировать взаимоотношения с клиентами с помощью CRM, наладить контроль над сотрудниками.</p>
+						<h3>Краткий план работ</span></h3>
+						<ul>
+							<li> Регистрация вашего портала в сети или на вашем сервере, регистрация до 6 сотрудников.</li>
+							<li> Настройка стадий лидов и сделок (не более 10).</li>
+							<li> Оптимизация карточек лида, контакта, сделки (настройка справочников).</li>
+							<li> Подключение одного телефонного номера для совершения вызовов.</li>
+							<li> Покупка номера внутри сервиса Битрикс24 или подключение внешнего SIP-номера. Настройка телефонии и записи разговоров (стоимость номера и оплата за услуги телефонии не входят в стоимость пакета).</li>
+							<li> Подключение функции «Еmail трекер» для автоматического добавления переписки в CRM.</li>
+							<li> Интеграция CRM и личного почтового ящика (до 6 персональных почтовых адресов — по одному на каждого менеджера).</li>
+							<li> Обучение по обработке и конвертации лидов, ведению сделок, заполнению карточки контакта.</li>
+						</ul>
+						<h3>Что получится в итоге?</h3>
+						<ul>
+							<li> Автоматизацию процесса продаж.</li>
+							<li> Учет взаимоотношений с клиентами.</li>
+							<li> Возможность слушать и анализировать звонки менеджеров.</li>
+							<li> Контроль над отделом продаж и действиями каждого менеджера в отдельности.</li>
+						</ul>
+						<h3>Стоимость пакета <br> от <span class="blue-text cost">9 850</span> рублей.</h3>
+						<div class="tabs__button text-center">
+							<button class="open-modal button button--small">заказать</button>
+						</div>
+					</section>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- // TARIFFS -->
+
+	<!-- SERVICES -->
+	<div class="services">
+		<div id="parallaxServices" class="clouds-bg">
+			<img class="cloud" src="img/clouds-bg/cloud-l-240.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-l-240.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-153.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-126.png" data-offset="90">
+		</div>
+		<div class="container">
+			<div class="services-title title-1 wow zoomIn" data-wow-delay="0.15s">Услуги</div>
+			<div class="services-cards">
+				<div class="card text-left">
+					<div class="card__title">Основные <br> настройки CRM</div>
+					<div class="card__wrap">
+						<div class="card__cost-title">Стоимость:</div>
+						<div class="card__cost">от <span class="blue-text">12 000</span> руб.</div>
+						<div class="card__services-list">
+							<ul>
+								<li>Загрузка в Битрикс24 списка компаний, предоставленных Заказчиком в файле формата CSV, <br>по шаблону, <br>предоставленному Исполнителем</li>
+								<li>Настройка полей для контактов, компаний и сделок</li>
+								<li>Настройка этапов сделок и лидов</li>
+								<li>Настройка ролей и прав доступа</li>
+								<li>Настройка воронки продаж</li>
+								<li>Настройка рабочего стола (основные отчеты) в CRM для руководителя</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card__button">
+						<button class="open-modal button button--small button--orange">заказать <br>настройку crm</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__title">Выездное обучение для <br> сотрудников вашей компании</div>
+					<div class="card__wrap">
+						<div class="card__cost-title">Стоимость:</div>
+						<div class="card__cost">от <span class="blue-text">10 000</span> руб.</div>
+						<div class="card__services-list card__services-list--small">
+							<ul>
+								<li>Общее знакомство с Битрикс24 (обзор основных инструментов продукта)</li>
+								<li>Мотивация сотрудников в использовании Битрикс24 (отдельный курс для сотрудников и руководства компании)</li>
+								<li>Практический курс по использованию модуля CRM</li>
+								<li>Практический курс по использованию бизнес-процессов и другие курсы</li>
+								<li>Проведение выездного курса</li>
+								<li>Проведение тестирования среди сотрудников на предмет усвоения ими курса</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card__button card__button--smaller">
+						<button class="open-modal button button--small">заказать обучение</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // SERVICES -->
+
+	<!-- WHY US -->
+	<div class="container why-us">
+		<div class="why-us__title title-1 wow zoomIn" data-wow-delay="0.15s">Почему <span class="blue-text">мы?</span></div>
+		<div class="why-us__reasons">
+			<div class="reason">
+				<div class="reason__title">8<span class="plus">+</span></div>
+				<div class="reason__description">лет группа компаний “ТВИМ” <br class="small">работает в сфере IT разработок</div>
+			</div>
+			<div class="reason">
+				<div class="reason__title">3<span class="plus">+</span></div>
+				<div class="reason__description">года занимаемся <br>направлением Битрикс&nbsp;24</div>
+			</div>
+			<div class="reason">
+				<div class="reason__title">
+					<img src="img/icons/r-medal.png">
+				</div>
+				<div class="reason__description">являемся Золотыми сертифи&shy;цированными партнёрами Битрикс&nbsp;24 </div>
+			</div>
+			<div class="reason">
+				<div class="reason__title">
+					<img src="img/icons/r-arrow.png">
+				</div>
+				<div class="reason__description">у нас чёткий план <br>по внедрению Битрикс&nbsp;24</div>
+			</div>
+			<div class="reason">
+				<div class="reason__title">
+					<img src="img/icons/r-people.png">
+				</div>
+				<div class="reason__description">над проектом работает команда <br class="small">первоклассных специалистов</div>
+			</div>
+			<div class="reason">
+				<div class="reason__title">10</div>
+				<div class="reason__description">сертифицированных <br>специалистов <br class="big">в штате</div>
+			</div>
+		</div>
+	</div>
+	<!-- // WHY US -->
+
+	<!-- FREE CONSULTATION -->
+	<div class="free-consultation">
+		<div class="container ">
+			<div class="free-consultation__wrap text-center">
+				<div class="free-consultation__title">Заказать консультацию <br>и презентацию <span class="blue-text">бесплатно</span></div>
+				<div class="free-consultation__button">
+					<button class="open-modal button button--orange">заказать</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // FREE CONSULTATION -->
+
+	<!-- OUR CLIENTS -->
+	<div class="container our-clients">
+		<div class="our-clients__title title-1 wow zoomIn" data-wow-delay="0.15s">Наши <span class="blue-text">клиенты</span></div>
+		<div class="our-clients__logo">
+			<div class="client-logo__wrap">
+				<div class="client-logo">
+					<img src="img/logo/l-spec-vition.png">
+				</div>
+				<div class="client-logo">
+					<img src="img/logo/l-dom-marcket.png">
+				</div>
+			</div>
+			<div class="client-logo__wrap">
+				<div class="client-logo">
+					<img src="img/logo/l-razlivnoi-rai.png">
+				</div>
+				<div class="client-logo">
+					<img src="img/logo/l-biograf.png">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // OUR CLIENTS -->
+
+	<!-- LAST WORKS -->
+	<div class="container last-works">
+		<div class="last-works__title title-1 wow zoomIn" data-wow-delay="0.15s">Последние <span class="blue-text">работы</span></div>
+		<div id="carouselLastWorks" class="last-works__slider">
+			<div class="work-item">
+				<img src="img/works/w-claud.png">
+				<div class="work-item__description">
+					<dl>
+						<dt>Заказчик:</dt>
+						<dd>ООО «КЕГА»</dd>
+						<dt>Вид работ:</dt>
+						<dd>Облако «Компания»</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="work-item">
+				<img src="img/works/w-portal.png">
+				<div class="work-item__description">
+					<dl>
+						<dt>Заказчик:</dt>
+						<dd>Spezvition</dd>
+						<dt>Вид работ:</dt>
+						<dd>Корпоративный портал</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="work-item">
+				<img src="img/works/w-portal.png">
+				<div class="work-item__description">
+					<dl>
+						<dt>Заказчик:</dt>
+						<dd>ООО «КЕГА»</dd>
+						<dt>Вид работ:</dt>
+						<dd>Корпоративный портал</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // LAST WORKS -->
+
+	<!-- FEEDBACK FORM -->
+	<div class="feedback-form feedback-form--clouds">
+		<div id="parallaxForm" class="clouds-bg">
+			<img class="cloud" src="img/clouds-bg/cloud-l-240.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-l-240.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-153.png" data-offset="90">
+			<img class="cloud" src="img/clouds-bg/cloud-r-126.png" data-offset="90">
+		</div>
+		<div class="container">
+			<div class="feedback-form__title title-1 wow zoomIn" data-wow-delay="0.15s">
+				<span>Заказать внедрение </span>
+				<img src="img/logo/bitrix-big-logo-white.png" alt="Битрикс24">
+			</div>
+			<form id="formStatic" class="feedback-form__form">
+				<div class="items-group">
+					<div class="form-group form-group--pr25">
+						<input class="input" type="text" name="name">
+						<label class="label">Ваше имя</label>
+					</div>
+					<div class="form-group">
+						<input class="input" type="text" name="second_name">
+						<label class="label">Ваше отчество</label>
+					</div>
+				</div>
+				<div class="items-group">
+					<div class="form-group form-group--pr25">
+						<input class="input" type="text" name="company">
+						<label class="label">Название компании</label>
+					</div>
+					<div class="form-group">
+						<input class="input" type="text" name="email">
+						<label class="label">E-mail</label>
+					</div>
+				</div>
+				<div class="items-group">
+					<div class="form-group">
+						<textarea class="input" name="comment" rows="1"></textarea>
+						<label class="label">Комментарий</label>
+					</div>
+				</div>
+				<div class="items-group files">
+					<a href="#" class="button button--transparent">скачать анкету</a>
+					<input class="inputfile" id="inputFile" type="file" name="file" value="прикрепить анкету">
+					<label for="inputFile" class="button button--transparent">прикрепить анкету</label>
+					<span>Файл не выбран</span>
+				</div>
+				<div class="items-group checkbox">
+					<label class="checkbox__label">
+						<input class="checkbox__input" type="checkbox" name="agree" checked>
+						<span class="checkbox__custom"></span>
+						<span class="checkbox__text">Я согласен на обработку <br>персональных данных</span>
+					</label>
+				</div>
+				<div class="form__error">
+					<div id="regisErr"></div>
+				</div>
+				<div class="feedback-form__button">
+					<input type="submit" class="button" value="отправить">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- // FEEDBACK FORM -->
+
+	<!-- FOOTER -->
+	<footer class="footer-bg">
+		<div class="container footer">
+			<a href="#" class="footer__logo-twim">
+				<img src="img/logo/twim-logo-short.png" alt="ТВИМ">
+				<div>Группа компаний «ТВИМ» <br>Все права защищены.</div>
+			</a>
+			<div class="footer__logo-bitrix">
+				<span>Внедрение</span>
+				<img src="img/logo/bitrix-big-logo-blue.png" alt="Битрикс24">
+			</div>
+			<div class="footer__contacts">
+				<div class="address">Воронеж, ул. Революции 1905 года, 82н</div>
+				<div class="phone-voronehz"><i class="blue-text icon-mobile"></i>+7 (473) 203-01-80 Воронеж</div>
+				<div class="phone-moscow"><i class="blue-text icon-mobile"></i>+7 (495) 777-51-79 Москва</div>
+				<div class="email"><i class="blue-text icon-mail"></i> sales@creatwim.ru</div>
+			</div>
+		</div>
+	</footer>
+	<!-- // FOOTER -->
+	
+	<!-- SCRIPTS -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/slick/slick/slick.min.js"></script>
+	<script src="libs/autoresize-textarea-master/autoresize-textarea.js"></script>
+	<script src="libs/jquery.arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+	<script src="libs/wow.js/wow.min.js"></script>
+	<script src="js/custom-file-input.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+.modal-wrap {
+	display: none;
+}
+.feedback-form {
+	background: @bgBlue;
+	padding-top: 35px;
+	padding-bottom: 40px;
+	color: #fff;
+	position: relative;
+	@media (min-width: 1200px) {
+		padding-top: 60px;
+		&--clouds {z-index: 0;}
+		.clouds-bg {z-index: -1;}
+	}
+	&--modal {
+		width: 290px;
+		margin: 0 auto;
+		padding-right: 15px;
+		padding-left: 15px;
+		border-radius: 10px;
+		position: relative;
+		@media (min-width: 768px) {
+			width: 720px;
+			padding-right: 47px;
+			padding-left: 47px;
+		}
+		@media (min-width: 1200px) {
+			width: 860px;
+		}
+	}
+	.feedback-form__close {
+		cursor: pointer;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		@media (min-width: 768px) {
+			width: 23px;
+			height: 23px;
+			top: 25px;
+			right: 25px;
+		}
+		@media (min-width:1200px) {
+			width: 27px;
+			height: 27px;
+			top: 30px;
+			right: 30px;
+		}
+		
+		&:before, &:after {
+			@width: 4px;
+			@height: 20px;
+			content: "";
+			width: @width;
+			height: @height;
+			background: #fff;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			margin-top: -@height/2;
+			margin-left: -@width/2;
+			transition: all 0.2s ease-in;
+			@media (min-width: 768px) {
+				@width: 6px;
+				@height: 22px;
+				width: @width;
+				height: @height;
+				margin-top: -@height/2;
+				margin-left: -@width/2;
+			}
+			@media (min-width: 1200px) {
+				@height: 24px;
+				height: @height;
+				margin-top: -@height/2;
+			}
+		}
+		
+		&:after {transform: rotate(45deg);}
+		&:hover {
+			transform: rotate(360deg);
+			&:after {transform: rotate(315deg);}
+			&:before {transform: rotate(-315deg);}
+		}
+
+	}
+}
+
+.feedback-form__title {
+	margin-bottom: 25px;
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	}
+	span {
+		display: block;
+		margin-bottom: 10px;
+		@media (min-width: 768px) {
+			display: inline-block;
+			margin-right: 15px;
+			margin-bottom: 0;
+		}
+		@media (min-width: 1200px) {
+			margin-top: -3px;
+		}
+	}
+	img {
+		width: 127px;
+		height: 28px;
+		@media (min-width: 768px) {
+			width: 203px;
+			height: 46px;
+		}
+		@media (min-width: 1200px) {
+			width: 306px;
+			height: 70px;
+		}
+	}
+	@media (min-width: 768px) {
+		&--modal {
+			flex-direction: column;
+			span {
+				text-align: left;
+				font-size: 42px;
+				margin-bottom: 5px;
+			}
+			img {
+				width: 209px;
+				height: 48px;
+			}
+		}
+	}
+	@media (min-width: 1200px) {
+		&--modal {
+			flex-direction: column;
+			span {font-size: 48px;}
+			img {
+				width: 250px;
+				height: 57px;
+			}
+		}
+	}
+}
+
+.feedback-form__form {
+	color: #fff;
+	@media (min-width: 1200px) {
+		width: 65%;
+		margin: 0 auto;
+		&--modal {
+			width: 100%;
+		}
+	}
+
+	.form-group {
+		position: relative;
+		min-height: 80px;
+		padding-top: 30px;
+		margin-bottom: 20px;
+		width: 100%;
+		@media (min-width: 768px) {
+			&--pr25 {padding-right: 25px;}
+		}
+	}
+	.input {
+		width: 100%;
+		height: 50px;
+		outline-style: none;
+		outline: 0;
+		border: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		background-color: transparent;
+		color: #fff;
+
+		transition: all 0.2s ease-in-out;
+
+		&:active, &:hover, &:focus {
+			border-bottom: 1px solid #fff;
+		}
+		
+		&:focus, &--valid {
+			+ .label {
+				top: 0;
+				font-size: 16px;
+			}
+		}
+	}
+
+	.label {
+		position: absolute;
+		left: 0;
+		top: 42px;
+		color: rgba(255, 255, 255, 0.5);
+		font-size: 24px;
+		pointer-events: none;
+		transition: all 0.2s;
+	}
+
+	textarea.input {
+		min-height: 50px;
+		height: auto;
+		padding-top: 14px;
+		padding-bottom: 10px;
+		overflow: hidden;
+		resize: none;
+	}
+
+	.items-group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		margin-bottom: 25px;
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+		&.files {
+			padding-top: 10px;
+			font-size: 16px;
+			@media (min-width: 1200px) {
+				margin-bottom: 30px;
+			}
+			span {
+				width: 250px;
+				text-align: center;
+				margin-top: -10px;
+				word-wrap: break-word;
+				@media (min-width: 768px) {
+					width: 240px;
+					display: block;
+					text-align: left;
+				}
+				@media (min-width: 1200px) {
+					width: 260px;
+				}
+			}
+			.inputfile {
+				width: 0.1px;
+				height: 0.1px;
+				opacity: 0;
+				overflow: hidden;
+				z-index: -2;
+			}
+			.button {
+				display: block;
+				margin-bottom: 25px;
+				font-size: 16px;
+				padding: 10px 30px;
+				@media (min-width: 768px) {
+					display: inline-block;
+					margin-right: 30px;
+					margin-bottom: 0;
+				}
+			}
+			&--modal {
+				@media (min-width: 768px) {
+					span {width: 180px;}
+					.button {padding: 10px 22px;}
+				}
+				@media (min-width: 1200px) {
+					span {width: 285px;}
+					.button {padding: 10px 30px;}
+				}
+			}
+		}
+
+		&.checkbox {
+			.checkbox__label {
+				display: inline-block;
+				position: relative;
+				cursor: pointer;
+				text-align: center;
+			}
+			.checkbox__text {
+				display: inline-block;
+				padding-left: 23px;
+				@media (min-width: 768px) {
+					br {display: none;}
+				}
+			}
+			.checkbox__custom {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				border: 1px solid #fff;
+				border-radius: 4px;
+				background: @bgBlue;
+				position: absolute;
+				top: 2px;
+				left: 0;
+			}
+			.checkbox__input {
+				position: absolute;
+				top: 3px;
+				left: 2px;
+				z-index: -2;
+				&:checked + .checkbox__custom:before {
+					content: "";
+					background: rgba(255, 255, 255, 0.8);
+					border-radius: 2px;
+					position: absolute;
+					top: 3px;
+					bottom: 3px;
+					left: 3px;
+					right: 3px;
+				}
+			}
+		}
+	}
+		
+	.feedback-form__button {
+		text-align: center;
+		margin-bottom: -60px;
+		@media (min-width: 768px) {
+			margin-bottom: -63px;
+		}
+		@media (min-width: 1200px) {
+			margin-bottom: -68px;
+		}
+		.button {
+			@media (min-width: 768px) {
+				font-size: 24px;
+				padding: 10px 40px;
+			}
+			@media (min-width: 1200px) {
+				padding: 16px 40px;
+			}
+		}
+
+		&--modal {
+			@media (min-width: 768px) {
+				margin-bottom: -65px;
+				.button {
+					font-size: 21px;
+					padding: 15px 30px;
+				}
+			}
+			@media (min-width: 1200px) {
+				margin-bottom: -68px;
+				.button {
+					font-size: 24px;
+					padding: 16px 40px;
+				}
+			}
+		}
+	}
+
+}
+.form__error {
+	text-align: center;
+	.is-error {
+		border-top: 1px solid #cf3d3d;
+		border-bottom: 1px solid #cf3d3d;
+		padding: 10px 0;
+		font-size: 21px;
+		margin-bottom: 22px;
+	}
+}

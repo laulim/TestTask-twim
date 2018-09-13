@@ -1,0 +1,112 @@
+.order-services-bg {
+	background: @bgBlueLigther;
+	padding-top: 50px;
+
+	@media (min-width: 768px) {
+		padding-top: 75px;
+	}
+
+	@media (min-width: 1200px) {
+		background: @bgBlueLigth;
+		padding-top: 130px;
+	}
+}
+
+.order-services-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	.order-services {
+		font-size: 18px;
+		text-align: center;
+		&__order {
+			margin-bottom: 50px;
+		}
+		.order-services__text {
+			margin-bottom: 20px;
+		}
+		.blue-text {
+			font-weight: 700;
+			color: @bgBlue;
+		}
+		.logo {
+			margin-bottom: -5px;
+			height: 22px;
+			width: 94px;
+		}
+		.order-services__button{
+			margin-bottom: -18px;
+			.button {
+				border: none;
+				width: 160px;
+				padding-right: 0;
+				padding-left: 0;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+		.order-services {
+			font-size: 24px;
+			&__order {
+				margin-bottom: 0px;
+			}
+			.order-services__text {
+				margin-bottom: 20px;
+			}
+			.logo {
+				margin-bottom: -7px;
+				height: 30px;
+				width: 129px;
+			}
+			.order-services__button{
+				margin-bottom: -24px;
+				position: relative;
+				&--cloud:after {
+					content: "";
+					height: 38px;
+					width: 63px;
+					background-image: url("../../img/clouds/cloud-button1.png");
+					background-size: cover;
+					position: absolute;
+					top: 23px;
+					right: 58px;
+				}
+				.button {
+					width: 191px;
+					font-size: 20px;
+					padding: 15px 0;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.order-services {
+			font-size: 36px;
+			.order-services__text {
+				margin-bottom: 35px;
+			}
+			.logo {
+				margin-bottom: -8px;
+				height: 40px;
+				width: 173px;
+			}
+			.order-services__button{
+				margin-bottom: -30px;
+				&--cloud:after {
+					height: 48px;
+					width: 79px;
+					top: 24px;
+					right: 127px;
+				}
+				.button {
+					width: 240px;
+					padding: 18px 0;
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}

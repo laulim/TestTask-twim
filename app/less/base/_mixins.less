@@ -1,0 +1,25 @@
+.title-cloud (@768top, @768left, @1200top, @1200left) {
+	@media (min-width: 768px) {
+		position: relative;
+		&:before {
+			content: "";
+			height: 50px;
+			width: 82px;
+			background-image: url("../../img/clouds/cloud-big.png");
+			background-size: cover;
+			z-index: -1;
+			position: absolute;
+			top: @768top;
+			left: @768left;
+		}
+	}
+	@media (min-width: 1200px) {
+		&:before {
+			height: 92px;
+			width: 152px;
+			top: @1200top;
+			left: @1200left;
+		}
+	}
+}
+
